@@ -1,0 +1,65 @@
+/* globals.css - 全体的なスタイルを定義 */
+:root {
+    --primary-color: #1DB954;
+    /* Spotifyのブランドカラー */
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --text-secondary-color: #b3b3b3;
+    --font-size-large: 1.6rem;
+    --font-size-medium: 1.2rem;
+    --font-size-small: 1rem;
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border-radius: 50%;
+}
+
+button {
+    background-color: var(--primary-color);
+    border: none;
+    color: white;
+    padding: var(--spacing-medium);
+    border-radius: var(--spacing-small);
+    font-size: var(--font-size-medium);
+    cursor: pointer;
+}
+
+/* Responsive Grid for tracks and artists */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: var(--spacing-medium);
+}
+
+/* Utilities for spacing and alignment */
+.mt-4 {
+    margin-top: var(--spacing-large);
+}
+
+.mb-4 {
+    margin-bottom: var(--spacing-large);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
