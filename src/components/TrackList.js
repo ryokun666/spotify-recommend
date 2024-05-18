@@ -31,9 +31,10 @@ const TrackList = ({
     try {
       const playlistId = await createPlaylist(userId, trackUris, accessToken);
       if (playlistId) {
-        alert(
-          `プレイリストが作成されました: https://open.spotify.com/playlist/${playlistId}`
-        );
+        const playlistUrl = `https://open.spotify.com/playlist/${playlistId}`;
+        alert(`プレイリストが作成されました！Spotifyに遷移します😃`);
+        // アラートを閉じた後に新しいタブでURLに遷移
+        window.open(playlistUrl, "_blank");
       }
     } catch (error) {
       alert(
