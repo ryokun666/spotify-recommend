@@ -2,7 +2,7 @@
 
 import LogoutButton from "@/components/LogoutButton";
 
-const Header = () => {
+const Header = ({ isLogout }) => {
   return (
     <div
       style={{
@@ -34,7 +34,7 @@ const Header = () => {
           ディスカバ
         </h1>
       </div>
-      <LogoutButton />
+      <LogoutButton isLogout={isLogout} />
     </div>
   );
 };

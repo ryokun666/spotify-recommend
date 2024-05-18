@@ -139,7 +139,7 @@ function Home() {
             ))}
           </ul>
         ) : (
-          <p>No artists found.</p>
+          <p>読み込み中・・・</p>
         )}
       </div>
 

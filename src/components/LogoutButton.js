@@ -2,12 +2,13 @@
 
 import { signOut } from "next-auth/react";
 
-export default function LogoutButton() {
+export default function LogoutButton({ isLogout }) {
   return (
     <div className="logout-container">
       <button
         onClick={() => signOut({ callbackUrl: "/login" })}
-        className="logout-button"
+        className={`logout-button ${isLogout ? "disabled" : ""}`}
+        disabled={isLogout}
       >
         ログアウト
       </button>
@@ -29,6 +30,10 @@ export default function LogoutButton() {
         }
         .logout-button:hover {
           background-color: #c53030; /* Tailwind hover:bg-red-700 */
+        }
+        .logout-button.disabled {
+          background-color: gray;
+          cursor: not-allowed;
         }
       `}</style>
     </div>
